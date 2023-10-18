@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
       mix.value = _mouseX;
       mix.dispatchEvent(new Event('input'));
       _mouseY = e.clientY/document.body.clientHeight;
+      audioInput.Q.value = ( -1 * _mouseY + 0.5) * 40;
     }
   }
 })
