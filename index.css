@@ -10,3 +10,12 @@
 #view1 {
   display: none;
 }
+
+body {
+  color: white;
+}
+
+select {
+    color: white;
+    background: none;
+}
