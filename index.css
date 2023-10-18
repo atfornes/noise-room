@@ -17,5 +17,5 @@ body {
 
 select {
     color: white;
-    background: none;
+    background: rgba(0,0,0,.5);
 }
