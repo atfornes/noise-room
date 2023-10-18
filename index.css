@@ -6,3 +6,7 @@
   left: 0;
   z-index: -1000;
 }
+
+#view1 {
+  display: none;
+}
