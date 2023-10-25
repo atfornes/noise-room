@@ -1,8 +1,0 @@
-- uses: actions/cache@v3
-  with:
-    # cache directory
-    path: node_modules/.cache/webpack/
-    key: ${{ GITHUB_REF_NAME }}-webpack-build
-    # fallback to use "main" branch cache
-    restore-keys: |
-      main-webpack-build
