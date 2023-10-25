@@ -15,7 +15,7 @@ async function load(){
 
     let iframe = document.createElement("iframe")
     iframe.id="audioEffects"
-    iframe.src="https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/index.html"
+    iframe.src="https://atfornes.github.io/noise-room"
     iframe.allow="microphone"
     document.body.appendChild(iframe);
 
