@@ -10,18 +10,12 @@ async function load(){
     iframe.id="audioEffects"
     iframe.src="https://atfornes.github.io/noise-room"
     iframe.allow="microphone"
+    iframe.style="position: absolute; height: 100%; right: 0;"
     document.body.appendChild(iframe);
 
     let d = document.createElement("div");
     d.id ="hydra-audio-effects";
     document.body.appendChild(d);
-
-    // styles
-    let style= document.createElement("link")
-    style.setAttribute("rel", "stylesheet")
-    style.setAttribute("href", "https://atfornes.github.io/noise-room/index.css")
-    style.setAttribute("crossorigin","anonymous")
-    document.head.appendChild(style)
 
     }
 
