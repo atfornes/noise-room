@@ -7,7 +7,7 @@ async function load(){
     // styles
     let style= document.createElement("link")
     style.setAttribute("rel", "stylesheet")
-    style.setAttribute("href", "https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/index.css")
+    style.setAttribute("href", "https://atfornes.github.io/noise-room/index.css")
     style.setAttribute("crossorigin","anonymous")
     document.head.appendChild(style)
 
