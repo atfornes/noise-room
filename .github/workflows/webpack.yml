@@ -2,9 +2,9 @@ name: NodeJS with Webpack
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "noise-room" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "noise-room" ]
 
 jobs:
   build:
