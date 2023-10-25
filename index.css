@@ -11,6 +11,12 @@
   display: none;
 }
 
+#audioEffects {
+  position: absolute;
+  height: 100%;
+  right: 0;
+}
+
 body {
   color: white;
 }
