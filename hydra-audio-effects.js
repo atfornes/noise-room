@@ -7,31 +7,42 @@ async function load(){
     window.document.body.appendChild(d);
 
     // copied from index.html
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/effect.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/waveshaper.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/jungle.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/effects.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/pingpong.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/apollo.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/cursorControls.js");
+    await import("./js/effect.js");
+    await import("./js/waveshaper.js");
+    await import("./js/jungle.js");
+    await import("./js/effects.js");
+    await import("./js/pingpong.js");
+    await import("./js/apollo.js");
+    await import("./js/cursorControls.js");
 
     // Visualizer stuff -->
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/events.js");
+    await import("./js/visualizer/events.js");
 
     // WebGL stuff -->
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/base.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/cameracontroller.js");
+    await import("./js/visualizer/base.js");
+    await import("./js/visualizer/cameracontroller.js");
 
     // TODO(kbr): remove this dependency -->
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/matrix4x4.js");
+    await import("./js/visualizer/matrix4x4.js");
 
     // Visualizer GL library -->
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/visualizer.js");
-    await loadScript("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/js/visualizer/shader.js");
+    await import("./js/visualizer/visualizer.js");
+    await import("./js/visualizer/shader.js");
 
-    const resp = await fetch("https://cdn.jsdelivr.net/gh/atfornes/noise-room@latest/index.html");
-    const html = await resp.text();
-    document.body.insertAdjacentHTML("beforeend", html);
+    // styles
+    let style= document.createElement("link")
+    style.setAttribute("rel", "stylesheet")
+    style.setAttribute("href", "./index.css")
+    style.setAttribute("crossorigin","anonymous")
+    document.head.appendChild(style)
+
+    // page
+    const resp2 = await fetch("./index.html");
+    const html2 = await resp2.text();
+    document.body.insertAdjacentHTML("beforeend", html2);
+
+    initAudio()
+
     }
 
 }
