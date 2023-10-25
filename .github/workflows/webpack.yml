@@ -28,3 +28,5 @@ jobs:
         npx webpack
     - name: Deploy to gh-Pages
       uses: JamesIves/github-pages-deploy-action@v4.4.3
+      with:
+          folder: build
