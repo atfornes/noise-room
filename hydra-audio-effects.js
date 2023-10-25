@@ -2,7 +2,7 @@
 
 async function load(){
   if (! document.getElementById("hydra-audio-effects")) {
-    d = document.createElement("div");
+    let d = document.createElement("div");
     d.id ="hydra-audio-effects";
     window.document.body.appendChild(d);
 
