@@ -18,6 +18,7 @@
     "@actions/github": "^6.0.0"
   },
   "scripts": {
+    "predeploy" : "npm run build",
     "build": "npx webpack"
   }
 }
