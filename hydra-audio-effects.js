@@ -1,7 +1,22 @@
 // load needed scripts
 
 async function load(){
+
   if (! document.getElementById("hydra-audio-effects")) {
+
+    // styles
+    let style= document.createElement("link")
+    style.setAttribute("rel", "stylesheet")
+    style.setAttribute("href", "./index.css")
+    style.setAttribute("crossorigin","anonymous")
+    document.head.appendChild(style)
+
+    // page
+    const resp2 = await fetch("./index.html");
+    const html2 = await resp2.text();
+    document.body.insertAdjacentHTML("beforeend", html2);
+
+
     let d = document.createElement("div");
     d.id ="hydra-audio-effects";
     window.document.body.appendChild(d);
@@ -29,19 +44,6 @@ async function load(){
     await import("./js/visualizer/visualizer.js");
     await import("./js/visualizer/shader.js");
 
-    // styles
-    let style= document.createElement("link")
-    style.setAttribute("rel", "stylesheet")
-    style.setAttribute("href", "./index.css")
-    style.setAttribute("crossorigin","anonymous")
-    document.head.appendChild(style)
-
-    // page
-    const resp2 = await fetch("./index.html");
-    const html2 = await resp2.text();
-    document.body.insertAdjacentHTML("beforeend", html2);
-
-    initAudio()
 
     }
 
