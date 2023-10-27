@@ -1,7 +1,14 @@
-# Live Audio Input effects
+# Noise Room
+*Live Audio Input effects with Hydra plugin*
 
-I whipped this app up to test live audio input, letting the user select a few common tunable effects and see (and hear) the effects.  It's also a good demo of how to build chorus and flanging effects in WebAudio.
+Noise Room is an addaptation of [Audio Input Effects](https://cwilso.github.io/Audio-Input-Effects/) for live performances:
 
-Check it out [here](https://cwilso.github.io/Audio-Input-Effects/), feel free to fork, submit pull requests, etc.
+- Bigger audio rendering
+- Less controls
+- Widget and [Hydra](hydra.ojack.xyz/) plugin available:
+    ``` javascript
+    await import("https://atfornes.github.io/noise-room/addIframe.js")
+    ```
 
--Chris
+
+
