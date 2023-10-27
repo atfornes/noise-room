@@ -47,4 +47,4 @@ async function load(){
 
 }
 
-load()
+document.addEventListener("load", load())
